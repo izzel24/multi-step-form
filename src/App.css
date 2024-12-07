@@ -1,42 +1,111 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+    font-family: u-bold;
+    src: url("./assets/fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+    font-family: u-medium;
+    src: url("./assets/fonts/Ubuntu-Medium.ttf");
+}
+@font-face {
+    font-family: u-regular;
+    src: url("./assets/fonts/Ubuntu-Regular.ttf");
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.bold{
+    font-family: u-bold;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.medium{
+    font-family: u-medium;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.regular{
+    font-family: u-regular;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white{
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container-app{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(217, 100%, 97%);
 }
 
-.card {
-  padding: 2em;
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0,1fr));
+    height: 600px;
+    width: 900px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.115);
+    padding: 15px;
 }
 
-.read-the-docs {
-  color: #888;
+.side-bar{
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    border-radius: 5px;
+    display: flex;
+    padding: 30px;
+    grid-column: span 2/span 2;
+}
+.main-content{
+    grid-column: span 5/ span 5;
+    padding: 20PX;
+}
+.number-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.number{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    font-size: small;
+    color: white;
+    border-radius:  30px;
+    outline: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.step-number{
+    font-size: small;
+    color: hsl(228, 100%, 84%);
+}
+.title{
+    margin: 0;
+    padding: 0;
+}
+.paragraph{
+    font-size: 16px;
+}
+.l-gray{
+    color: hsl(229, 24%, 87%)
+}
+.c-gray{
+    color: hsl(231, 11%, 63%);
+}
+.input{
+    display: flex;
+    flex-direction: column;
+
+}
+.m-blue{
+    color: hsl(213, 96%, 18%)
 }
